@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/account_form.css' %}">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Logo</h1>
+        </div>
+
+        <div class="navlink">
+            <ul>
+                <li><a href="#">Search</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <form action="" class="account-form">
+        <h1>Sign Up</h1>
+        <hr>
+        <label for="email">Email</label>
+        <input type="email" placeholder="enter email..." required>
+        <label for="email">Password</label>
+        <input type="password" placeholder="enter password...">
+        <label for="email">Repeat Password</label>
+        <input type="password" placeholder="repeat password..." required>
+        <hr>
+        <button type="submit">Sign Up</button>
+        <p style="float:right">Have an account? <a href="{% url 'login' %}" id="login-btn">Login</a></p>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="185" height="310" viewBox="0 0 185 310">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0d1440;
+        fill-rule: evenodd;
+        opacity: 0.08;
+      }
+    </style>
+  </defs>
+  <path id="herofront" class="cls-1" d="M-6,363L-5,54l109,85L55,197l88,87-32,31,74,49Z" transform="translate(0 -54)"/>
+</svg>

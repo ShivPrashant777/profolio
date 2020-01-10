@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+body {
+  margin: 0;
+  --primary: #0d1440;
+  --secondary: #bf1736;
+  font-family: 'Roboto', sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fdffe8), to(#c33764));
+  background: linear-gradient(#fdffe8, #c33764);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+form.account-form {
+  margin: 20px;
+  padding: 40px;
+  background: radial-gradient(#e6e6e6, #edecff);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 10px 1px rgba(87, 87, 87, 0.5);
+          box-shadow: 0 1px 10px 1px rgba(87, 87, 87, 0.5);
+}
+
+form.account-form h1 {
+  margin: 0;
+}
+
+form.account-form hr {
+  border-top: 1.5px solid #dbe0ff;
+}
+
+form.account-form label {
+  color: var(--primary);
+}
+
+form.account-form input {
+  margin: 10px 0;
+  padding: 15px 5%;
+  width: 90%;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--primary);
+  color: white;
+  outline: none;
+}
+
+form.account-form input:focus {
+  outline: none;
+  background-color: #2a3263;
+}
+
+form.account-form button:hover {
+  cursor: pointer;
+}
+
+form.account-form p {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+form.account-form p a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+form.account-form p a:hover {
+  color: var(--secondary);
+}
+
+form.account-form button[type=submit] {
+  border: none;
+  border-radius: 3px;
+  padding: 15px;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  background-color: var(--secondary);
+}
+
+form.account-form a {
+  color: var(--secondary);
+}
+
+@media only screen and (min-width: 768px) {
+  form.account-form {
+    margin: 80px auto;
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=account_form.css.map */
