@@ -24,7 +24,6 @@ def signup(request):
         if password1 == password2:
             o_ref = UserAccount(username=username, password=password1)
             o_ref.save()
-            print('User Created')
             return userInfo(request)
 
         else:
