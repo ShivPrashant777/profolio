@@ -16,10 +16,9 @@ def signup(request):
         password1 = request.POST['password1']
         password2 = request.POST['password2']
 
-        user = User.objects.create_user(username=username, password=password1)
+        user = UserAccount(username=username, password=password1)
         user.save()
-        print('User Created')
-        return redirect('/')
+        return render(request, 'signup.html')
         
     else:
         return render(request, "signup.html")
