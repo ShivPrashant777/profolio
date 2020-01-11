@@ -18,7 +18,7 @@ def signup(request):
 
         user = UserAccount(username=username, password=password1)
         user.save()
-        return render(request, 'signup.html')
+        return render(request, 'index.html')
         
     else:
         return render(request, "signup.html")
