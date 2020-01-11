@@ -22,16 +22,18 @@
         </div>
     </nav>
 
-    <form action="/user/" method='post' class="account-form">
+    <form action="" method="POST" class="account-form">
         {% csrf_token %}
         <h1>Login</h1>
         <hr>
-        <label for="email">Email</label>
-        <input type="text" placeholder="enter email..." name='username'>
-        <label for="email">Password</label>
-        <input type="password" placeholder="enter password..." name = 'password'>
+        <!-- <label for="email">Email</label>
+        <input type="text" placeholder="enter email..." name='username'> -->
+        <label for="username">Username</label>
+        <input type="text" placeholder="enter username..." name="username">
+        <label for="password">Password</label>
+        <input type="password" placeholder="enter password..." name = "password">
         <hr>
-        <button type="submit">Sign Up</button>
+        <button type="submit">Login</button>
         <p style="float:right">Create Account? <a href="{% url 'signup' %}" id="signup-btn">Sign Up</a></p>
     </form>
 

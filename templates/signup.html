@@ -24,7 +24,7 @@
         </div>
     </nav>
 
-    <form action="/user/" class="account-form" method="POST">
+    <form action="" class="account-form" method="POST">
         {% csrf_token %}
         <h1>Sign Up</h1>
         <hr>
@@ -32,9 +32,9 @@
         <input type="email" placeholder="enter email..." required> -->
         <label for="username">Username</label>
         <input type="text" placeholder="enter username..." name="username">
-        <label for="email">Password</label>
+        <label for="password">Password</label>
         <input type="password" placeholder="enter password..." name="password1">
-        <label for="email">Repeat Password</label>
+        <label for="rpt-password">Repeat Password</label>
         <input type="password" placeholder="repeat password..." name="password2" required> 
         <hr>
         <button type="submit">Sign Up</button>
