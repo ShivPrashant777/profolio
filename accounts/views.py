@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
+from .models import UserAccount
 
 def index(request):
     return render(request, "index.html")
@@ -22,3 +23,13 @@ def signup(request):
         
     else:
         return render(request, "signup.html")
+
+
+def newUser(request):
+    name = request.POST.get("username")
+    passwd = request.POST.get("password")
+
+    o_ref = UserAccount(username = name, password = passwd)
+    o_ref.save()
+
+    return render(request, 'index.html')
