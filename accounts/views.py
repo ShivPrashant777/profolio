@@ -30,7 +30,8 @@ def signup(request):
             print('User Created')
             return redirect('/')
         else:
-            print("Passwords don't Match!")
+            return render(request, "signup.html")
+
         
     else:
         return render(request, "signup.html")
