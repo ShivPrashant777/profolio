@@ -5,8 +5,10 @@ from .models import UserAccount
 
 def login(request):
     if request.method == 'POST':
+        userName = request.POST['username']
         password = request.POST['password']
-        user_name = UserAccount.objects.get(username = request.POST['username'])
+
+        user_name = UserAccount.objects.get(username = userName)
         return render(request, 'test.html', {'user': user_name})
     
     else:
@@ -22,8 +24,7 @@ def signup(request):
         if password1 == password2:
             o_ref = UserAccount(username=username, password=password1)
             o_ref.save()
-            print('User Created')
-            return redirect("userinfo")
+            return userInfo(request)
 
         else:
             return render(request, "signup.html")
