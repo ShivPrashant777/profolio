@@ -1,0 +1,69 @@
+form.userinfo-form {
+  margin: 20px;
+  padding: 40px;
+  background: radial-gradient(#e6e6e6, #edecff);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 10px 1px rgba(87, 87, 87, 0.5);
+          box-shadow: 0 1px 10px 1px rgba(87, 87, 87, 0.5);
+}
+
+form.userinfo-form h1 {
+  margin: 0;
+}
+
+form.userinfo-form hr {
+  border-top: 1.5px solid #dbe0ff;
+}
+
+form.userinfo-form label {
+  color: var(--primary);
+}
+
+form.userinfo-form input {
+  margin: 10px 0;
+  padding: 15px 2%;
+  width: 40%;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--primary);
+  color: white;
+  outline: none;
+}
+
+form.userinfo-form input:focus {
+  outline: none;
+  background-color: #2a3263;
+}
+
+form.userinfo-form button:hover {
+  cursor: pointer;
+}
+
+form.userinfo-form p {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+form.userinfo-form p a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+form.userinfo-form p a:hover {
+  color: var(--secondary);
+}
+
+form.userinfo-form button[type=submit] {
+  border: none;
+  border-radius: 3px;
+  padding: 15px;
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+  background-color: var(--secondary);
+}
+
+form.userinfo-form a {
+  color: var(--secondary);
+}
+/*# sourceMappingURL=userinfo_form.css.map */

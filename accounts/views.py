@@ -28,7 +28,8 @@ def signup(request):
             o_ref = UserAccount(username=username, password=password1)
             o_ref.save()
             print('User Created')
-            return redirect('/')
+            return userInfo(request)
+
         else:
             return render(request, "signup.html")
 
@@ -37,5 +38,5 @@ def signup(request):
         return render(request, "signup.html")
 
 
-def newUser(request):
-    pass
+def userInfo(request):
+    return render(request, 'userinfo.html')
