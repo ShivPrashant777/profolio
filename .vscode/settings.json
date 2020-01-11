@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+    "python.pythonPath": "C:\\Users\\DELL\\envs\\projs\\Scripts\\python.exe",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "python.linting.mypyEnabled": false
