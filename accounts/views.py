@@ -5,18 +5,15 @@ from .models import UserAccount
 
 def login(request):
     if request.method == 'POST':
-        username = request.POST['username']
+        userName = request.POST['username']
         password = request.POST['password']
 
-        user = auth.authenticate(username=username, password=password)
-        if user is not None:
-            auth.login(request, user)
-            return redirect('/')
-        else:
-            return render(request, "login.html")
+        user_name = UserAccount.objects.get(username = userName)
+        return render(request, 'test.html', {'user': user_name})
+    
     else:
-        print("not POST")
-        return render(request, "login.html")
+        return render(request, 'login.html')
+
 
 def signup(request):
     if request.method == 'POST':
@@ -40,3 +37,5 @@ def signup(request):
 
 def userInfo(request):
     return render(request, 'userinfo.html')
+
+
