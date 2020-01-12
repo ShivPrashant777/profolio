@@ -5,10 +5,14 @@ from .models import UserAccount
 
 def login(request):
     if request.method == 'POST':
-        password = request.POST['password']
-        user_name = UserAccount.objects.get(username = request.POST['username'])
-        return render(request, 'test.html', {'user': user_name})
-    
+        user_info = UserAccount.objects.all()
+        input_password = request.POST['password']
+        for user in user_info:
+            if input_password == user.password:
+                return render(request, 'test.html', {'user': user})
+            else:
+                print("Invalid Credentials")
+                return render(request, 'login.html')
     else:
         return render(request, 'login.html')
 
