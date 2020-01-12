@@ -5,9 +5,9 @@ from .models import UserAccount
 
 def login(request):
     if request.method == 'POST':
-        user_info = UserAccount.objects.all()
+        Users = UserAccount.objects.all()
         input_password = request.POST['password']
-        for user in user_info:
+        for user in Users:
             if input_password == user.password:
                 return render(request, 'test.html', {'user': user})
             else:
@@ -30,9 +30,9 @@ def signup(request):
             return redirect("userinfo")
 
         else:
+            print("Passwords don't Match")
             return render(request, "signup.html")
-
-        
+   
     else:
         return render(request, "signup.html")
 
