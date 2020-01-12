@@ -22,12 +22,17 @@ def signup(request):
         username = request.POST['username']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
-
+        
         if password1 == password2:
-            o_ref = UserAccount(username=username, password=password1)
-            o_ref.save()
-            print('User Created')
-            return redirect("userinfo")
+            if UserAccount.objects.get(username=username) == UserAccount.DoesNotExist:
+                o_ref = UserAccount(username=username, password=password1)
+                o_ref.save()
+                print('User Created')
+                return redirect("userinfo")
+            else:
+                print("User Already Exists")
+                return render(request, "signup.html")
+                
 
         else:
             print("Passwords don't Match")
