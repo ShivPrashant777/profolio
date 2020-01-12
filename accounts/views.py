@@ -45,4 +45,3 @@ def signup(request):
 def userInfo(request):
     return render(request, 'userinfo.html')
 
-
