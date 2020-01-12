@@ -24,7 +24,7 @@ def signup(request):
         password2 = request.POST['password2']
         
         if password1 == password2:
-            if UserAccount.objects.get(username=username) == UserAccount.DoesNotExist:
+            if UserAccount.objects.filter(username=username).exists() == False:
                 o_ref = UserAccount(username=username, password=password1)
                 o_ref.save()
                 print('User Created')
