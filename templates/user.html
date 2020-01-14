@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'css/userinfo_form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/account_form.css' %}">
     <title>Profolio | {{user.username}}</title>
 </head>
 
@@ -28,10 +28,14 @@
         </div>
     </nav>
 
-    <form method="POST", enctype="multipart/form-data">
+    <form method="POST", enctype="multipart/form-data" class="account-form">
         {% csrf_token %}
+        <h1>Link Your Page</h1>
+        <hr>
+        <label for="portfolio-file">Upload Your File here</label>
         <input type="file" name="document">
-        <button type="submit">Upload File</button>
+        <button type="submit">Upload File</button> <br>
+        <a href="#" style="float: right;">Goto your page-></a>
     </form>
     <script src="{% static 'scripts/drop.js' %}"></script>
 </body>

@@ -27,7 +27,7 @@ def login(request):
 def signup(request):
     if request.method == 'POST':
         username = request.POST['username']
-        password1 = request.POST['password1']
+        password = password1 = request.POST['password1']
         password2 = request.POST['password2']
         
         if password1 == password2:
@@ -35,7 +35,9 @@ def signup(request):
                 o_ref = User.objects.create_user(username=username, password=password1)
                 o_ref.save() 
                 print('User Created')
-                return redirect(userinfo)
+                user = auth.authenticate(username=username, password=password)
+                auth.login(request, user)
+                return redirect('../../user/')
 
             else:
                 print("User Already Exists")
@@ -49,8 +51,8 @@ def signup(request):
         return render(request, "signup.html")
 
 
-def userinfo(username):
-    pass
+
+    
 
 
 
