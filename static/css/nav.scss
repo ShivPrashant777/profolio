@@ -15,11 +15,41 @@ nav {
     color: white;
     
     .logo {
-        flex: 50%;
+        flex: 30%;
         padding: 0 30px;
         font-size: 20px;
     }
+    .dropdown{
+    .btn{
+        margin: 10px;
+        padding: 0 30px;
+        font-size: 20px;
 
+        a{
+            text-decoration: none;
+        }
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .show{
+          display: block;
+      }
+}   
     ul{
         display: flex;
         margin-right: 10px;

@@ -16,15 +16,18 @@
         <div class="logo">
             <h1>Profolio</h1>
         </div>
-        <div class="navlink">
-            <ul>
-                <li><a href="#">Search</a></li>
-                <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a href="#">{{user.username}}</a></li>
-                <li><a href="/user/logout">Logout</a></li>
-            </ul>
+        <div class="dropdown">
+            <div class="btn">
+                <a href="#">Name</a>
+            </div>
+        <div class="dropdown-content">
+                <a href="#">Search</a>
+                <a href="{% url 'index' %}">Home</a>
+                <a href="#">{{user.username}}</a>
+                <a href="/user/logout">Logout</a>
         </div>
+    </div>
     </nav>
-
+    <script src="{% static 'scripts/drop.js' %}"></script>
 </body>
 </html>
