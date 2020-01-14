@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     <link rel="stylesheet" href="{% static 'css/userinfo_form.css' %}">
-    <title>Profolio |{{user.username}}</title>
+    <title>Profolio | {{user.username}}</title>
 </head>
 
 <body>
@@ -18,12 +18,11 @@
         </div>
         <div class="dropdown">
             <div class="btn">
-                <a href="#">Name</a>
+                <a href="#">{{user.username}}</a>
             </div>
         <div class="dropdown-content">
                 <a href="#">Search</a>
                 <a href="{% url 'index' %}">Home</a>
-                <a href="#">{{user.username}}</a>
                 <a href="/user/logout">Logout</a>
         </div>
     </div>
