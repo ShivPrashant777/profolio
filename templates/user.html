@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     <link rel="stylesheet" href="{% static 'css/userinfo_form.css' %}">
-    <title>User Page</title>
+    <title>Profolio |{{user.username}}</title>
 </head>
 
 <body>
@@ -21,6 +21,7 @@
                 <li><a href="#">Search</a></li>
                 <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a href="#">{{user.username}}</a></li>
+                <li><a href="/user/logout">Logout</a></li>
             </ul>
         </div>
     </nav>

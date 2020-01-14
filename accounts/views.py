@@ -12,7 +12,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return userpage(request)
+            return redirect('../../user/')
 
         else:
             print("Invalid Credentials")
@@ -48,6 +48,5 @@ def signup(request):
         return render(request, "signup.html")
 
 
-def userpage(request):
-    return render(request, 'test.html')
+
 
