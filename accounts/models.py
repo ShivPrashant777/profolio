@@ -1,6 +1,7 @@
 from django.db import models
 
 def user_dir_path(instance, filename):
+    print(instance.username,filename)
     return 'user_{0}/{1}'.format(instance.username, filename)
 
 
