@@ -28,7 +28,6 @@ def signup(request):
     if request.method == 'POST':
         
         username = request.POST['username']
-        request.session[username]
         password = password1 = request.POST['password1']
         password2 = request.POST['password2']
         
@@ -41,6 +40,8 @@ def signup(request):
                 print('User Created')
                 user = auth.authenticate(username=username, password=password)
                 auth.login(request, user)
+                print(user)
+                request.session[username]
                 return redirect('../../user/')
 
             else:
