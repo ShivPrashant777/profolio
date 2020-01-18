@@ -28,7 +28,7 @@ def signup(request):
     if request.method == 'POST':
         
         username = request.POST['username']
-        request.session['username']
+        request.session[username]
         password = password1 = request.POST['password1']
         password2 = request.POST['password2']
         
