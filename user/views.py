@@ -9,7 +9,7 @@ def logout(request):
 
 def userpage(request):
     if request.method == 'POST':
-        username = request.session['username']
+        username = request.session.get(['username'])
         uploaded_file = request.FILES["document"]
         print(username)
         fs = UserAccount(file_user= uploaded_file)

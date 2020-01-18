@@ -41,7 +41,7 @@ def signup(request):
                 user = auth.authenticate(username=username, password=password)
                 auth.login(request, user)
                 print(user)
-                request.session[username]
+                request.session.get(['user'])
                 return redirect('../../user/')
 
             else:
