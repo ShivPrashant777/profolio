@@ -24,6 +24,14 @@ def login(request):
         return render(request, 'login.html')
 
 
+def userpage(request, user):
+    if request.method == 'POST':
+        uploaded_file = request.FILES["document"]
+        fs = UserAccount(file_user= uploaded_file)
+        fs.save(uploaded_file)
+    return render(request, 'user.html')
+
+
 def signup(request):
     if request.method == 'POST':
         
@@ -41,25 +49,15 @@ def signup(request):
                 user = auth.authenticate(username=username, password=password)
                 auth.login(request, user)
                 print(user)
-                return(username)
-
+                return render(request, 'user.html')
+            
             else:
                 print("User Already Exists")
                 return render(request, "signup.html")
-                
+        
         else:
             print("Passwords don't Match")
             return render(request, "signup.html")
    
     else:
         return render(request, "signup.html")
-
-
-def userpage(request):
-    if request.method == 'POST':
-        uploaded_file = request.FILES["document"]
-        print(username)
-        fs = UserAccount(file_user= uploaded_file)
-        fs.save(uploaded_file)
-    return render(request, 'user.html')
-
