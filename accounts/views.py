@@ -41,8 +41,7 @@ def signup(request):
                 user = auth.authenticate(username=username, password=password)
                 auth.login(request, user)
                 print(user)
-                request.session.get(['user'])
-                return redirect('../../user/')
+                return(username)
 
             else:
                 print("User Already Exists")
@@ -54,4 +53,13 @@ def signup(request):
    
     else:
         return render(request, "signup.html")
+
+
+def userpage(request):
+    if request.method == 'POST':
+        uploaded_file = request.FILES["document"]
+        print(username)
+        fs = UserAccount(file_user= uploaded_file)
+        fs.save(uploaded_file)
+    return render(request, 'user.html')
 
