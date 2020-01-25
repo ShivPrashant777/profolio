@@ -31,15 +31,15 @@
         <!-- <label for="email">Email</label>
         <input type="email" placeholder="enter email..." required> -->
         <label for="username">Username</label>
-        <input type="text" placeholder="enter username..." name="username">
+        <input type="text" placeholder="enter username..." name="username" id="uname">
         <label for="password">Password</label>
-        <input type="password" placeholder="enter password..." name="password1">
+        <input type="password" placeholder="enter password..." name="password1" id="pass">
         <label for="rpt-password">Repeat Password</label>
-        <input type="password" placeholder="repeat password..." name="password2" required> 
+        <input type="password" placeholder="repeat password..." name="password2" required id="pass2"> 
         <hr>
-        <button type="submit">Sign Up</button>
+        <button type="submit" class="sign">Sign Up</button>
         <p style="float:right">Have an account? <a href="{% url 'login' %}" id="login-btn">Login</a></p>
     </form>
-
+<script src="/static/scripts/sign.js"></script>
 </body>
 </html>

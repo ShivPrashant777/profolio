@@ -24,12 +24,12 @@ def login(request):
         return render(request, 'login.html')
 
 
-#def userpage(request, user):
-#   if request.method == 'POST':
-#        uploaded_file = request.FILES["document"]
-#        fs = UserAccount(file_user= uploaded_file)
-#        fs.save(uploaded_file)
-#    return render(request, 'user.html')
+def userpage(request, user):
+   if request.method == 'POST':
+        uploaded_file = request.FILES["document"]
+        fs = UserAccount(file_user= uploaded_file)
+        fs.save(uploaded_file)
+        return render(request, 'user.html')  
 
 
 def signup(request):
