@@ -11,8 +11,11 @@ def userpage(request):
     if request.method == 'POST':
         uname = request.user.username
         uploaded_file = request.FILES["document"]
-        fs = UserAccount(username= uname, file_user= uploaded_file)
-        fs.save(uploaded_file)
+        emp = UserAccount.objects.get(username=uname)
+        emp.file_user = uploaded_file
+        emp.save()
+        # fs = UserAccount(username= uname, file_user= uploaded_file)
+        # fs.save(uploaded_file)
     return render(request, 'user.html')
 
 
