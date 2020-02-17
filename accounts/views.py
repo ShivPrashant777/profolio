@@ -34,7 +34,6 @@ def userpage(request, user):
 
 def signup(request):
     if request.method == 'POST':
-        
         username = request.POST['username']
         password = password1 = request.POST['password1']
         password2 = request.POST['password2']
@@ -49,7 +48,7 @@ def signup(request):
                 user = auth.authenticate(username=username, password=password)
                 auth.login(request, user)
                 print(user)
-                return render(request, 'user.html')
+                return redirect('../../user/')
             
             else:
                 print("User Already Exists")
