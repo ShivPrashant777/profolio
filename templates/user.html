@@ -32,10 +32,12 @@
         {% csrf_token %}
         <h1>Link Your Page</h1>
         <hr>
-        <label for="portfolio-file">Upload Your File here</label>
-        <input type="file" name="document">
+        <label for="html-file">Upload Your <b>HTML</b> File here</label>
+        <input type="file" name="html_file">
+        <label for="css-file">Upload Your <b>CSS</b> Files here</label>
+        <input type="file" name="css_file">
         <button type="submit">Upload File</button> <br>
-        <a href="#" style="float: right;">Goto your page-></a>
+        <a href="../user/user_{{user.username}}/index.html" style="float: right;">Goto your page-></a>
     </form>
     <script src="{% static 'scripts/drop.js' %}"></script>
 </body>

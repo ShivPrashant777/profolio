@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  --primary: #1d2744;
+  color: var(--primary);
+  background: -webkit-gradient(linear, right top, left top, from(#ece9e6), to(#e9e9e9));
+  background: linear-gradient(270deg, #ece9e6, #e9e9e9);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.left {
+  width: 70%;
+  padding: 20px 80px 20px 50px;
+  height: 1000px;
+  background: url("Back.png");
+  background-size: 100% 75%;
+  background-repeat: no-repeat;
+}
+
+.left h2.logo {
+  font-size: 2.5em;
+}
+
+.left h1 {
+  margin: 70px 0 50px 0;
+  font-size: 3.6em;
+}
+
+.left p {
+  font-size: 2em;
+  margin-bottom: 60px;
+}
+
+.left input {
+  margin: 0;
+  font-size: 1.5em;
+  padding: 10px 10px 10px 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #1bbc4c;
+  color: white;
+}
+
+.left input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.left input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.left input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.left input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.left input:focus, .left button:focus {
+  outline: none;
+}
+
+.left button {
+  position: relative;
+  right: 6px;
+  margin: 0;
+  font-size: 1.5em;
+  padding: 10px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.left button:hover {
+  cursor: pointer;
+  background-color: #7c73ff;
+}
+
+.right {
+  float: right;
+  width: 30%;
+  height: 780px;
+  background: var(--primary);
+}
+
+.right ul.account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+  margin: 33px 50px 20px 50px;
+  list-style-type: none;
+}
+
+.right ul.account li {
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+.right ul.account li a {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

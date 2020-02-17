@@ -9,3 +9,5 @@ class UserAccount(models.Model):
     username = models.CharField(default='noname', max_length=50)
     password = models.CharField(max_length=10)
     file_user = models.FileField(upload_to = user_dir_path, default= 'null')
+    file_user_css = models.FileField(upload_to = user_dir_path, default= 'null')
+    

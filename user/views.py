@@ -7,12 +7,12 @@ from accounts.views import signup, login
 def userpage(request):
     if request.method == 'POST':
         uname = request.user.username
-        uploaded_file = request.FILES["document"]
-        emp = UserAccount.objects.get(username=uname)
-        emp.file_user = uploaded_file
-        emp.save()
-        # fs = UserAccount(username= uname, file_user= uploaded_file)
-        # fs.save(uploaded_file)
+        html_file = request.FILES["html_file"]
+        css_file = request.FILES["css_file"]
+        temp = UserAccount.objects.get(username=uname)
+        temp.file_user = html_file
+        temp.file_user_css = css_file
+        temp.save()
     return render(request, 'user.html')
 
 

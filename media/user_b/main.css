@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap");
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  background: linear-gradient(135deg, white, #fff5f5);
+}
+
+header {
+  padding: 30px;
+}
+
+.hero .show-mob {
+  width: 100%;
+}
+
+.hero .show-mob img {
+  width: 211em;
+}
+
+.hero .show-desk {
+  display: none;
+}
+
+.right {
+  width: 100%;
+}
+
+.left {
+  margin-top: 50px;
+}
+
+.left h1 span {
+  letter-spacing: 10px;
+  font-size: 1.5em;
+  display: block;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+}
+
+.left p {
+  text-align: center;
+  padding: 10px 70px;
+  line-height: 25px;
+  font-weight: 400;
+  color: #ce9797;
+}
+
+.left .input {
+  margin: 10px 0;
+}
+
+.left .input input {
+  margin: 20px 0 20px 80px;
+  padding: 15px 10%;
+  width: 40%;
+  background: rgba(255, 255, 255, 0);
+  color: #ce9797;
+  border: 1px solid #ce9797;
+  border-radius: 20px;
+}
+
+.left .input button {
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  position: relative;
+  top: 5px;
+  right: 50px;
+  border-radius: 25px;
+  border: none;
+  padding: 13px 25px;
+  -webkit-box-shadow: 0 3px 5px 1px rgba(206, 151, 151, 0.5);
+          box-shadow: 0 3px 5px 1px rgba(206, 151, 151, 0.5);
+}
+
+.left .input input:focus, .left .input button:focus {
+  outline: none;
+}
+
+.left .input input::-webkit-input-placeholder {
+  color: #ce9797;
+}
+
+.left .input input:-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.left .input input::-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.left .input input::placeholder {
+  color: #ce9797;
+}
+
+.left .input button:hover {
+  background: linear-gradient(135deg, #fff0f0, #ffc7c7);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background: url("../images/bg-pattern-desktop.svg");
+    background-size: 65%;
+    background-repeat: no-repeat;
+  }
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .hero .show-mob {
+    display: none;
+  }
+  .hero .show-desk {
+    display: block;
+  }
+  header {
+    padding: 50px 90px;
+    width: 60%;
+  }
+  .left {
+    width: 60%;
+  }
+  .left h1 span {
+    font-weight: 600;
+    font-size: 2em;
+    margin: 0 90px;
+    text-align: left;
+  }
+  .left p {
+    margin: 0 20px;
+    padding-right: 300px;
+    text-align: left;
+  }
+  .left .input {
+    margin-left: 20px;
+  }
+  .left .input input {
+    width: 50%;
+  }
+  .left .input button {
+    padding: 13px 40px;
+  }
+  .right {
+    width: 40%;
+  }
+  .right img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
