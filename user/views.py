@@ -9,10 +9,9 @@ def logout(request):
 
 def userpage(request):
     if request.method == 'POST':
-        username = request.session.get(['username'])
+        uname = request.user.username
         uploaded_file = request.FILES["document"]
-        print(username)
-        fs = UserAccount(file_user= uploaded_file)
+        fs = UserAccount(username= uname, file_user= uploaded_file)
         fs.save(uploaded_file)
     return render(request, 'user.html')
 
